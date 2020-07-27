@@ -1,0 +1,145 @@
+.contacts {
+
+	&__title {
+	}
+
+	&__body {
+		@include flexbox();
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		flex: 0 1 50%;
+
+		@media (max-width: 1000px) {
+			flex: 0 1 100%;
+
+			&:last-child {
+				height: 400px;
+			}
+		}
+	}
+
+	&__info {
+		padding: 35px 30px;
+		background-color: #fff;
+
+		@media (max-width:$md3+px) {
+			padding: 10px;
+		}
+	}
+
+	&__footer {
+		padding: 25px 10px;
+		background-color: #00b5ab;
+		text-align: center;
+		font-size: 18px;
+		color:#fff;
+		line-height: 1.22;
+		text-transform: uppercase;
+
+		@media (max-width:$md3+px) {
+			padding: 15px 10px;
+		}
+	}
+}
+.contacts-info {
+
+	&__address {
+		width: 100%;
+		max-width: 500px;
+		border: 7px solid #f7f7f7;
+		margin: 0px 0px 25px 0px;
+
+		@media (max-width:$md3+px) {
+			margin-top: 25px;
+		}
+	}
+
+	&__place {
+		padding: 40px 0 30px 165px;
+		font-size: 18px;
+		color: #292626;
+		line-height: 1.22;
+		position: relative;
+
+		@media (max-width:$md3+px) {
+			padding-left: 10px;
+			padding-top: 100px;
+		}
+
+		&:before {
+			content:'';
+			width: 108px;
+			height: 117px;
+			background: url('../img/contacts/01.jpg') 0 0 no-repeat;
+			position: absolute;
+			left: 23px;
+			bottom: 30px;
+
+			@media (max-width:$md3+px) {
+				bottom: 90px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__block {
+		@include flexbox();
+
+		@media (max-width:$md3+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__phone {
+		width: 175px;
+		
+
+		@media (max-width:$md3+px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		padding-left: 50px;
+		margin: 0px 0px 15px 0px;
+		font-size: 16px;
+		color: #7c7373;
+		text-transform: uppercase;
+		line-height: 36px;
+
+		&--1 {
+			background: url('../img/contacts/02.png') left no-repeat;
+		}
+
+		&--2 {
+			background: url('../img/contacts/03.png') left no-repeat;
+		}
+
+		&--3 {
+			background: url('../img/contacts/04.png') left no-repeat;
+		}
+	}
+
+	&__text {
+
+		p {
+			font-size: 15px;
+			color: #292626;
+			line-height: 1.47;
+		}
+		
+
+		&:last-child {
+			margin: 22px 0px 0px 0px;
+		}
+	}
+
+	&__schedule {
+		@media (max-width:$md3+px) {
+			margin-bottom: 20px;
+		}
+	}
+}

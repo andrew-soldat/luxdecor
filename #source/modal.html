@@ -1,0 +1,92 @@
+<div class="modal" id="modal-registration">
+	<div class="modal__wrapper">
+		<button data-close class="modal__close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="registration">
+			<div class="registration__title modal-title">Регистрация</div>
+			<form action="/" class="registration__form">
+				<div class="registration__border modal-border">
+					<i class="fas fa-user icon"></i>
+					<input placeholder="Виктор" type="text" class="registration__input modal-input">
+				</div>
+				<div class="registration__border modal-border">
+					<i class="fas fa-user icon"></i>
+					<input placeholder="Фамилия" type="text"  class="registration__input modal-input">
+				</div>
+				<div class="registration__border modal-border">
+					<i class="fas fa-phone-alt icon"></i>
+					<input placeholder="Телефон" type="text"  class="registration__input modal-input">
+				</div>
+				<div class="registration__border modal-border">
+					<i class="fas fa-envelope icon"></i>
+					<input placeholder="Email" type="text"  class="registration__input modal-input">
+				</div>
+				<div class="registration__border modal-border">
+					<i class="fas fa-unlock-alt icon"></i>
+					<input placeholder="Пароль" type="password"  class="registration__input modal-input">
+				</div>
+				<div class="registration__border modal-border">
+					<i class="fas fa-unlock-alt icon"></i>
+					<input placeholder="Повторить пароль" type="password"  class="registration__input modal-input">
+				</div>
+				<button type="submit" class="registration__btn btn"><img src="img/enter-01.png" alt="">Регистрация</button>
+			</form>
+			<div class="registration__text modal-text">или <a href="" data-modal="#modal-enter" class="modal-text--link">войдите</a> , если у вас уже есть аккаунт</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-enter">
+	<div class="modal__wrapper">
+		<button data-close class="modal__close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="enter">
+			<div class="enter__title modal-title">Вход</div>
+			<form action="/" class="enter__form">
+				<div class="enter__border modal-border">
+					<i class="fas fa-envelope icon"></i>
+					<input placeholder="Email" type="text" class="enter__input modal-input">
+				</div>
+				<div class="enter__border modal-border">
+					<i class="fas fa-unlock-alt icon"></i>
+					<input placeholder="Пароль" type="password" class="enter__input modal-input">
+				</div>
+				<div class="enter__password modal-text">
+					<a href="" class="modal-text--link">Забыли пароль?</a>
+				</div>
+				<button type="submit" class="enter__btn btn"><img src="img/enter-01.png" alt="">Вход</button>
+			</form>
+			<div class="enter__text modal-text">У меня еще нет аккаунта. <a href="" data-modal="#modal-registration" class="enter__text--link modal-text--link">Регистранция.</a></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-cart">
+	<div class="modal__wrapper">
+		<button data-close class="modal__close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="cart">
+			<div class="cart__title">Ваш товар успешно добавлен в корзину</div>
+			<a href="checkout.html" type="submit" class="btn btn--checkout"><img src="img/ok.png" alt="">ОФОРМИТЬ ЗАКАЗ</a>
+			<button data-close type="submit" class="cart__btn btn btn--cart">Продолжить покупки</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-order">
+	<div class="modal__wrapper modal__wrapper--order">
+		<button data-close class="modal__close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="order">
+			<h4 class="order__title">Ваш заказ успешно оформлен!</h4>
+		</div>
+	</div>
+</div>

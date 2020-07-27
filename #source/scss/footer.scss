@@ -1,0 +1,255 @@
+.footer {
+
+		&__top {
+			padding: 30px 0px;
+			background-color: #403c3b;
+		}
+
+		&__row {
+			@include flexbox();
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			@media (max-width: 1030px) {
+				justify-content: center;
+			}
+		}
+
+		&__subscribe {
+			flex: 0 1 360px;
+			margin: 0px 20px 0px 0px;
+
+			@media (max-width: 1050px) {
+				margin: 0px 20px 20px 0px;
+			}
+		}
+
+		&__logo {
+		}
+
+		&__text {
+			margin: 25px 0px 20px 0px;
+			font-size: 16px;
+			color:#fff;
+			font-weight: 500;
+			text-transform: uppercase;
+			line-height: 1.63;
+		}
+
+		&__form {
+		}
+
+		&__catalog {
+			flex: 0 1 440px;
+			margin: 0px 20px 0 0;
+
+			@media (max-width: 450px) {
+				text-align: center;
+			}
+		}
+
+		&__title {
+			margin: 15px 0px 20px 0px;
+			font-size: 16px;
+			color:#fff;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		&__nav {
+			flex: 0 1 430px;
+			@include flexbox();
+			justify-content: space-between;
+
+			@media (max-width: 450px) {
+				flex-direction: column;
+			}
+		}
+
+		&__list {
+
+			li {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
+			color: #8b8787;
+
+			&:hover {
+				color:#fff;
+			}
+		}
+
+		&__contacts {
+			flex: 0 0 170px;
+		}
+
+		&__info {
+			text-align: right;
+		}
+
+		&__number {
+			margin: 0px 0px 10px 0px;
+			position: relative;
+
+			&:before {
+				content:'';
+				background: url('../img/phone.png') 0 0 no-repeat;
+				width: 21px;
+				height: 21px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
+
+		&__phone {
+		}
+
+		&__letter {
+			position: relative;
+
+			&:before {
+				content:'';
+				background: url('../img/email.png') 0 0 no-repeat;
+				width: 23px;
+				height: 14px;
+				position: absolute;
+				top: 3px;
+				left: 0;
+				z-index: 1;
+			}
+		}
+
+		&__email {}
+
+		&__icon {
+			margin: 20px 0px 0px 0px;
+			text-align: right;
+		}
+
+		&__social {
+			margin: 0px 15px 0px 0px;
+			position: relative;
+			display: inline-block;
+
+			&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255, 255, 255, 0.5);
+				opacity: 0;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				@include anim(0.3s,0s);
+			}
+
+			&:hover::before {
+				opacity: 1;
+			}
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+
+		&__bottom {
+			background-color: #383434;
+		}
+}
+.form-footer {
+	position: relative;
+
+	&__input {
+		width: 100%;
+		padding: 10px 60px 10px 10px;
+		font-size: 14px;
+		color: #fefefe;
+		background-color: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+
+		&::placeholder {
+			color:#fff;
+		}
+		
+		&:hover,
+		&:focus {
+			border: 1px solid #ffffff;
+		}
+	}
+
+	&__btn {
+		padding: 0px 22px 0px 0px;
+		font-size: 34px;
+		color:#fff;
+		background: none;
+		opacity: 0.4;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.bottom-footer {
+
+		&__body {
+			padding: 15px 0px;
+			@include flexbox();
+			justify-content: space-between;
+			align-items: center;
+
+			@media (max-width:$md3+px) {
+				flex-direction: column;
+			}
+		}
+
+		&__nav {
+		}
+
+		&__list {
+			@include flexbox();
+
+			flex-wrap: wrap;
+
+			@media (max-width:$md3+px) {
+				align-items: center;
+				justify-content: center;
+			}
+			li {
+				margin-right: 30px;;
+
+				@media (max-width:$md3+px) {
+					margin-bottom: 20px;
+
+					&:last-child {
+						margin-bottom: 20px;
+					}
+				}
+
+				&:last-child {
+					margin-right: 30px;
+				}
+			}
+		}
+
+		&__copyright {
+		}
+
+		&__text {
+			font-size: 14px;
+			color: #8b8787;
+		}
+}

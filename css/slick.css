@@ -1,0 +1,256 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: inline;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/* ====================  .slick-dots  ======================*/
+.slick-dots {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   z-index: 2;
+   -webkit-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   transform: translateX(-50%);
+}
+@media (max-width: 500px) {
+   .slick-dots {
+      bottom: 5px;
+   }
+}
+
+
+.slick-dots li {
+   margin: 10px;
+   position: relative;
+}
+.slick-dots li:before {
+   display: none;
+   content: "";
+   width: 30px;
+   height: 30px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   position: absolute;
+   top: -3px;
+   left: -10px;
+   z-index: 1;
+}
+.slick-dots li.slick-active:before {
+   display: block;
+}
+.slick-dots button {
+   width: 10px;
+   height: 10px;
+   background-color: #fff;
+   border-radius: 50%;
+   font-size: 0;
+   color: transparent;
+   cursor: pointer;
+}
+/* ====================  .slider-useful>.slick-dots ======================*/
+.slider-useful>.slick-dots {
+	bottom: -55px;
+}
+.slider-useful>.slick-dots li:before {
+	top: -10px;
+	border: 1px solid #fd9b00;
+}
+.slider-useful>.slick-dots button {
+	background-color: #c6c1c1;
+}
+.slider-useful>.slick-dots li.slick-active button {
+	background-color: #fd9b00;
+}
+/* ====================  .slick-arrow  ======================*/
+.slick-arrow {
+   font-size: 0;
+   width: 60px;
+   height: 60px;
+   border: 0;
+   background: none;
+   border-radius: 50%;
+   background-color: #f7f7f7;
+   position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+@media (max-width: 500px) {
+   .slick-arrow {
+      width: 40px;
+      height: 40px;
+   }
+   .slick-arrow:before {
+      right: 13px;
+   }
+}
+.slick-arrow:before {
+   content: "";
+   width: 12px;
+	height: 12px;
+	border: 0;
+   border-bottom: 2px solid #959595;
+   border-left: 2px solid #959595;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+   position: absolute;
+   top: 50%;
+   right: 18px;
+   z-index: 2;
+   margin-top: -6px;
+}
+.slick-arrow:hover::before {
+	border-color: #fb9a00;
+}
+
+@media (max-width: 500px) {
+   .slick-arrow:before {
+      right: 13px;
+   }
+}
+.slick-prev {
+   left: -30px;
+}
+@media (max-width: 500px) {
+   .slick-prev {
+      left: -20px;
+   }
+}
+.slick-next {
+   right: -30px;
+}
+@media (max-width: 500px) {
+   .slick-next {
+      right: -20px;
+   }
+}
+.slick-next:before {
+   -webkit-transform: rotate(225deg);
+   -ms-transform: rotate(225deg);
+   transform: rotate(225deg);
+   right: 28px;
+}
+@media (max-width: 500px) {
+   .slick-next:before {
+      right: 20px;
+   }
+}
